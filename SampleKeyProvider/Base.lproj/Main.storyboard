@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ezs-Io-3HW">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="CvO-sG-f7F">
+            <objects>
+                <navigationController id="Ezs-Io-3HW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mfu-c6-JvR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tip-JD-OGV" kind="relationship" relationship="rootViewController" id="xc2-0o-NFy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpD-gS-UBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="111"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NtR-tV-bYT">
+            <objects>
+                <viewController id="Tip-JD-OGV" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B8N-YL-xyJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="sEe-jW-hh0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2a7-dC-ltr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIb-an-FhU">
+                                <rect key="frame" x="48" y="72" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="LJg-fi-2ZE"/>
+                                </constraints>
+                                <state key="normal" title="Import PKCS #12 file from iTunes"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="221" y="72" width="160" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onImportPkcs12:" destination="Tip-JD-OGV" eventType="touchUpInside" id="OYZ-Wh-13I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2s-Fh-Ep2">
+                                <rect key="frame" x="48" y="107" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="fvQ-7d-FsO"/>
+                                </constraints>
+                                <state key="normal" title="Import sample PKCS #12 files"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="221" y="72" width="160" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onImportSamplePkcs12:" destination="Tip-JD-OGV" eventType="touchUpInside" id="I0a-1R-8nF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QG1-9V-434">
+                                <rect key="frame" x="48" y="139" width="500" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="hDm-PP-eYb"/>
+                                </constraints>
+                                <state key="normal" title="Clear Key Chain"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="221" y="72" width="160" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onClearKeyChain:" destination="Tip-JD-OGV" eventType="touchUpInside" id="ohl-cx-efK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QG1-9V-434" firstAttribute="top" secondItem="F2s-Fh-Ep2" secondAttribute="bottom" constant="2" id="1yw-8u-Zsh"/>
+                            <constraint firstItem="VIb-an-FhU" firstAttribute="centerX" secondItem="2a7-dC-ltr" secondAttribute="centerX" constant="-2" id="4Ll-Lr-Mnz"/>
+                            <constraint firstItem="F2s-Fh-Ep2" firstAttribute="leading" secondItem="VIb-an-FhU" secondAttribute="leading" id="8Vg-xt-xSQ"/>
+                            <constraint firstItem="QG1-9V-434" firstAttribute="trailing" secondItem="F2s-Fh-Ep2" secondAttribute="trailing" id="Ldn-2x-yWD"/>
+                            <constraint firstItem="QG1-9V-434" firstAttribute="leading" secondItem="F2s-Fh-Ep2" secondAttribute="leading" id="VFW-Xl-47p"/>
+                            <constraint firstItem="F2s-Fh-Ep2" firstAttribute="trailing" secondItem="VIb-an-FhU" secondAttribute="trailing" id="YFS-JK-zOi"/>
+                            <constraint firstItem="F2s-Fh-Ep2" firstAttribute="top" secondItem="B8N-YL-xyJ" secondAttribute="bottom" constant="43" id="lSt-wN-ThN"/>
+                            <constraint firstItem="VIb-an-FhU" firstAttribute="top" secondItem="B8N-YL-xyJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qXu-Oa-ZOZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f98-Mq-utE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TgH-d0-5XU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="594" y="111"/>
+        </scene>
+        <!--Pkcs12 View Controller-->
+        <scene sceneID="1BY-XV-yZb">
+            <objects>
+                <viewController storyboardIdentifier="p12ViewController" id="fEd-Nb-5dN" customClass="Pkcs12ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25X-PW-d9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="wJY-0a-weL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="09f-c8-m42">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7z-UM-WB1">
+                                <rect key="frame" x="20" y="78" width="560" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="669-1t-dvG"/>
+                                </constraints>
+                                <string key="text">A file that may contain cryptographic keys has been detected.  Enter your password below then click the Import button to import the keys.  Click the Cancel button to abort the import operation or the Delete button to delete the file.  The file is named: </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="20" width="560" height="151"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5r-eC-kNi">
+                                <rect key="frame" x="277" y="208" width="30" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="285" y="179" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="OnSkip" destination="fEd-Nb-5dN" eventType="touchUpInside" id="5lG-pw-zc2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjm-yz-OrM">
+                                <rect key="frame" x="370" y="208" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="OnDeleteFile:" destination="fEd-Nb-5dN" eventType="touchUpInside" id="Coy-Z9-QJH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emK-pj-iof">
+                                <rect key="frame" x="173" y="208" width="46" height="30"/>
+                                <state key="normal" title="Import"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="172" y="179" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="OnImport" destination="fEd-Nb-5dN" eventType="touchUpInside" id="uZ1-mx-4wz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="emK-pj-iof" firstAttribute="top" secondItem="c7z-UM-WB1" secondAttribute="bottom" constant="8" symbolic="YES" id="COK-xV-Cfa"/>
+                            <constraint firstItem="c7z-UM-WB1" firstAttribute="top" secondItem="25X-PW-d9v" secondAttribute="bottom" constant="14" id="GAn-Kv-yku"/>
+                            <constraint firstItem="R5r-eC-kNi" firstAttribute="top" secondItem="c7z-UM-WB1" secondAttribute="bottom" constant="8" symbolic="YES" id="NEh-sg-sj8"/>
+                            <constraint firstItem="R5r-eC-kNi" firstAttribute="leading" secondItem="emK-pj-iof" secondAttribute="trailing" constant="58" id="Rkd-XC-RTX"/>
+                            <constraint firstItem="c7z-UM-WB1" firstAttribute="leading" secondItem="09f-c8-m42" secondAttribute="leadingMargin" id="bnp-BN-l0N"/>
+                            <constraint firstItem="Zjm-yz-OrM" firstAttribute="top" secondItem="c7z-UM-WB1" secondAttribute="bottom" constant="8" symbolic="YES" id="fS4-FQ-alE"/>
+                            <constraint firstItem="Zjm-yz-OrM" firstAttribute="leading" secondItem="R5r-eC-kNi" secondAttribute="trailing" constant="63" id="hUh-dq-8Lf"/>
+                            <constraint firstItem="c7z-UM-WB1" firstAttribute="centerX" secondItem="09f-c8-m42" secondAttribute="centerX" id="oGW-ec-kTA"/>
+                            <constraint firstItem="R5r-eC-kNi" firstAttribute="centerX" secondItem="09f-c8-m42" secondAttribute="centerX" constant="-8" id="sZk-84-0Za"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="Zjm-yz-OrM" id="S9d-k1-viW"/>
+                        <outlet property="importButton" destination="emK-pj-iof" id="6kR-nW-AgF"/>
+                        <outlet property="messageView" destination="c7z-UM-WB1" id="DkO-PA-KMB"/>
+                        <outlet property="skipButton" destination="R5r-eC-kNi" id="YKa-jc-JPQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qge-uC-xPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="836"/>
+        </scene>
+        <!--Password Entry View Controller-->
+        <scene sceneID="pVU-2A-DiS">
+            <objects>
+                <viewController storyboardIdentifier="passwordViewController" id="Z6h-QP-L5I" customClass="PasswordEntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XBT-Xv-VDH"/>
+                        <viewControllerLayoutGuide type="bottom" id="isd-9B-hcb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yu2-AO-ukR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Type your password into the field below then click Submit or Cancel." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R8-f6-IdV">
+                                <rect key="frame" x="20" y="72" width="560" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="P6G-cc-1ur"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BC-YQ-UKr">
+                                <rect key="frame" x="217" y="174" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onEnterPassword:" destination="Z6h-QP-L5I" eventType="touchUpInside" id="6cO-af-7Pd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrX-jf-X2V">
+                                <rect key="frame" x="316" y="174" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancelPasswordEntry:" destination="Z6h-QP-L5I" eventType="touchUpInside" id="kyM-Ho-DMr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-vI-65r">
+                                <rect key="frame" x="20" y="136" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L8f-XP-kCW">
+                                <rect key="frame" x="317" y="352" width="51" height="31"/>
+                                <connections>
+                                    <action selector="revealPasswordChanged:" destination="Z6h-QP-L5I" eventType="valueChanged" id="rH3-wq-BpU"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reveal password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Ey-Pm5">
+                                <rect key="frame" x="143" y="357" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="B3z-Bb-AyA"/>
+                                    <constraint firstAttribute="height" constant="21" id="SBj-1q-e35"/>
+                                    <constraint firstAttribute="height" constant="21" id="Uiw-gZ-l2n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="B3z-Bb-AyA"/>
+                                        <exclude reference="Uiw-gZ-l2n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="B3z-Bb-AyA"/>
+                                        <include reference="Uiw-gZ-l2n"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YrX-jf-X2V" firstAttribute="baseline" secondItem="0BC-YQ-UKr" secondAttribute="baseline" id="2Ux-4k-eAn"/>
+                            <constraint firstItem="Gh5-vI-65r" firstAttribute="top" secondItem="3R8-f6-IdV" secondAttribute="bottom" constant="10" id="3a6-Ou-l3T"/>
+                            <constraint firstItem="0BC-YQ-UKr" firstAttribute="top" secondItem="Gh5-vI-65r" secondAttribute="bottom" constant="8" symbolic="YES" id="4RU-Xu-SrW"/>
+                            <constraint firstItem="3R8-f6-IdV" firstAttribute="centerX" secondItem="Yu2-AO-ukR" secondAttribute="centerX" id="74a-FD-e2Q"/>
+                            <constraint firstItem="L8f-XP-kCW" firstAttribute="top" secondItem="0BC-YQ-UKr" secondAttribute="bottom" constant="148" id="Eiv-bc-1zG"/>
+                            <constraint firstItem="L8f-XP-kCW" firstAttribute="leading" secondItem="wPW-Ey-Pm5" secondAttribute="trailing" constant="45" id="MM0-Yx-ST1"/>
+                            <constraint firstItem="3R8-f6-IdV" firstAttribute="leading" secondItem="Gh5-vI-65r" secondAttribute="leading" id="RWK-wJ-Ch4"/>
+                            <constraint firstItem="3R8-f6-IdV" firstAttribute="trailing" secondItem="Gh5-vI-65r" secondAttribute="trailing" id="ZHU-71-fRa"/>
+                            <constraint firstItem="0BC-YQ-UKr" firstAttribute="centerX" secondItem="Yu2-AO-ukR" secondAttribute="centerX" constant="-58.5" id="bYD-Qd-L1P"/>
+                            <constraint firstItem="wPW-Ey-Pm5" firstAttribute="centerX" secondItem="Yu2-AO-ukR" secondAttribute="centerX" constant="-92.5" id="cmr-rf-5sa"/>
+                            <constraint firstItem="3R8-f6-IdV" firstAttribute="top" secondItem="XBT-Xv-VDH" secondAttribute="bottom" constant="8" id="i8B-gp-k4c"/>
+                            <constraint firstItem="3R8-f6-IdV" firstAttribute="leading" secondItem="Yu2-AO-ukR" secondAttribute="leadingMargin" id="ryb-IF-9kY"/>
+                            <constraint firstItem="YrX-jf-X2V" firstAttribute="leading" secondItem="0BC-YQ-UKr" secondAttribute="trailing" constant="50" id="uxj-3n-AwZ"/>
+                            <constraint firstItem="wPW-Ey-Pm5" firstAttribute="centerY" secondItem="L8f-XP-kCW" secondAttribute="centerY" id="zNR-BX-HR7"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="YrX-jf-X2V" id="7Mb-ec-NBF"/>
+                        <outlet property="passwordTextField" destination="Gh5-vI-65r" id="TWB-0t-HA7"/>
+                        <outlet property="revealPasswordSwitch" destination="L8f-XP-kCW" id="4sc-8m-SUr"/>
+                        <outlet property="submitButton" destination="0BC-YQ-UKr" id="N2M-wc-O5x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bmi-dg-lgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="836"/>
+        </scene>
+    </scenes>
+</document>
