@@ -25,7 +25,7 @@
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionFileProviderDocumentGroup</key>
-		<string>group.red.hound.SampleKeyProvider</string>
+		<string>group.red.hound.enterprise.SampleKeyProvider.security</string>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.fileprovider-nonui</string>
 		<key>NSExtensionPrincipalClass</key>

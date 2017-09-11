@@ -47,6 +47,7 @@ enum KeyChainDataSourceMode
     //!items contains the values retrieved from the key chain
     NSMutableArray* items;
     NSArray* utis;
+    NSMutableArray* zip_items, *zip_names, *zip_sub_names;
     
     //!dictionary with friendly attribute names (prepared in init)
     NSMutableDictionary* attrNames;
@@ -72,7 +73,9 @@ enum KeyChainDataSourceMode
 - (size_t) numItems;
 - (SecIdentityRef) GetIdentityAtIndex:(long)index;
 - (NSData*) GetPKCS12AtIndex:(long)index;
+- (NSData*) GetPKCS12AtIndex:(long)index pw:(NSString*)pw;
 - (NSData*) GetPrivateKeyAtIndex:(long)index;
+- (NSData*) GetPKCS12Zip;
 
 - (int) numAttrGroups:(long)index;
 - (NSString*) getAttrStringAtIndex:(long)index attrGroup:(long)attrGroup;

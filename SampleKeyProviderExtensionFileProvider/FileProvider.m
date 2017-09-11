@@ -24,6 +24,10 @@
             // ensure the documentStorageURL actually exists
             NSError *error = nil;
             [[NSFileManager defaultManager] createDirectoryAtURL:newURL withIntermediateDirectories:YES attributes:nil error:&error];
+            if(error)
+            {
+                NSLog(@"%@", error);
+            }
         }];
     }
     return self;

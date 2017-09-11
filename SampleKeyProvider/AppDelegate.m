@@ -18,11 +18,15 @@
 @synthesize localFileManager;
 @synthesize curFile;
 
+
 //===========================================================
 // UIApplicationDelegate implementations
 //===========================================================
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
+    if([[url scheme]isEqualToString:@"skp"])
+        return YES;
+    
     // Get the
     UIDocumentInteractionController* docInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
     NSString* uti = docInteractionController.UTI;

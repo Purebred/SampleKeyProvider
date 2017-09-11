@@ -20,6 +20,12 @@
 #include <openssl/x509.h>
 #include <openssl/x509v3.h>
 
+#import "ZipFile.h"
+#import "ZipException.h"
+#import "FileInZipInfo.h"
+#import "ZipWriteStream.h"
+#import "ZipReadStream.h"
+
 enum CertType
 {
     CT_UNKNOWN = 0,
@@ -99,6 +105,46 @@ CertType GetCertType(SecCertificateRef cert)
     }
     
     return CT_UNKNOWN;
+}
+
+bool IsZipType(NSArray* utis)
+{
+    if([utis containsObject:@"purebred.zip.all"] ||
+       [utis containsObject:@"purebred.zip.all_user"] ||
+       [utis containsObject:@"purebred.zip.device"] ||
+       [utis containsObject:@"purebred.zip.signature"] ||
+       [utis containsObject:@"purebred.zip.encryption"] ||
+       [utis containsObject:@"purebred.zip.authentication"])
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool ZippedCertTypeRequested(SecCertificateRef cert, NSArray* utis)
+{
+    if(nil == utis || [utis containsObject:@"purebred.zip.all"])
+    {
+        return true;
+    }
+    
+    CertType ct = GetCertType(cert);
+    if(CT_UNKNOWN == ct)
+        return false;
+    else if(CT_DEVICE != ct && [utis containsObject:@"purebred.zip.all_user"])
+        return true;
+    else if(CT_DEVICE == ct && [utis containsObject:@"purebred.zip.device"])
+        return true;
+    else if(CT_SIGNATURE == ct && [utis containsObject:@"purebred.zip.signature"])
+        return true;
+    else if(CT_ENCRYPTION == ct && [utis containsObject:@"purebred.zip.encryption"])
+        return true;
+    else if(CT_AUTHENTICATION == ct && [utis containsObject:@"purebred.zip.authentication"])
+        return true;
+    
+    return false;
 }
 
 bool CertTypeRequested(SecCertificateRef cert, NSArray* utis)
@@ -609,6 +655,9 @@ static inline char itoh(int i) {
 
 - (int) countAttributesAtIndex:(long)index
 {
+    if(nil != zip_items)
+        return (int)zip_items.count;
+    
     int count = 0;
     
     CFTypeRef* attrs = NULL;
@@ -647,7 +696,7 @@ static inline char itoh(int i) {
 
 - (NSString*) getAttrValueAsString:(CFTypeRef)attribute value:(CFTypeRef)value
  {
-     NSString* attributeValueString = nil;
+    NSString* attributeValueString = nil;
     
     if(kSecAttrAccessible == attribute)
     {
@@ -856,34 +905,88 @@ static inline char itoh(int i) {
         //Execute the query saving the results in items.
         resultCode = SecItemCopyMatching((CFDictionaryRef)query, &result);
         
-        NSArray* resultCerts = (__bridge_transfer NSMutableArray*)result;
-        for(id item in resultCerts)
+        if(!IsZipType(self.utis))
         {
-            SecCertificateRef cert;
-            if(mode == KSM_Certificates)
+            NSArray* resultCerts = (__bridge_transfer NSMutableArray*)result;
+            for(id item in resultCerts)
             {
-                CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
-                cert = (SecCertificateRef)CFDictionaryGetValue(dict, kSecValueRef);
-            }
-            else if(mode == KSM_Identities)
-            {
-                CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
-                SecIdentityRef identity = (SecIdentityRef)CFDictionaryGetValue(dict, kSecValueRef);
-                OSStatus stat = SecIdentityCopyCertificate(identity, &cert);
-                if(errSecSuccess != stat)
-                    continue;
-            }
-            else
-                continue;
-            
-            
-            if(CertTypeRequested(cert, self.utis))
-            {
-                if(nil == items)
+                SecCertificateRef cert;
+                if(mode == KSM_Certificates)
                 {
-                    items = [[NSMutableArray alloc]init];
+                    CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
+                    cert = (SecCertificateRef)CFDictionaryGetValue(dict, kSecValueRef);
                 }
-                [items addObject:item];
+                else if(mode == KSM_Identities)
+                {
+                    CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
+                    SecIdentityRef identity = (SecIdentityRef)CFDictionaryGetValue(dict, kSecValueRef);
+                    OSStatus stat = SecIdentityCopyCertificate(identity, &cert);
+                    if(errSecSuccess != stat)
+                        continue;
+                }
+                else
+                    continue;
+                
+                
+                if(CertTypeRequested(cert, self.utis))
+                {
+                    if(nil == items)
+                    {
+                        items = [[NSMutableArray alloc]init];
+                    }
+                    [items addObject:item];
+                }
+            }
+        }
+        else{
+            NSArray* resultCerts = (__bridge_transfer NSMutableArray*)result;
+            for(id item in resultCerts)
+            {
+                SecCertificateRef cert;
+                if(mode == KSM_Certificates)
+                {
+                    CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
+                    cert = (SecCertificateRef)CFDictionaryGetValue(dict, kSecValueRef);
+                }
+                else if(mode == KSM_Identities)
+                {
+                    CFDictionaryRef dict = (__bridge CFDictionaryRef)item;
+                    SecIdentityRef identity = (SecIdentityRef)CFDictionaryGetValue(dict, kSecValueRef);
+                    OSStatus stat = SecIdentityCopyCertificate(identity, &cert);
+                    if(errSecSuccess != stat)
+                        continue;
+                }
+                else
+                    continue;
+                
+                
+                if(ZippedCertTypeRequested(cert, self.utis))
+                {
+                    if(nil == items)
+                    {
+                        items = [[NSMutableArray alloc]init];
+                        zip_items = [[NSMutableArray alloc]init];
+                        [items addObject:@"Zip File"];
+                        
+                        zip_names = [[NSMutableArray alloc]init];
+                        zip_sub_names = [[NSMutableArray alloc]init];
+                    }
+                    CertType ct = GetCertType(cert);
+                    if(CT_DEVICE == ct)
+                        [zip_names addObject:@"Device certificate"];
+                    else if(CT_SIGNATURE == ct)
+                        [zip_names addObject:@"Signature certificate"];
+                    else if(CT_ENCRYPTION == ct)
+                        [zip_names addObject:@"Encryption certificate"];
+                    else if(CT_AUTHENTICATION == ct)
+                        [zip_names addObject:@"Authentication certificate"];
+                    else //if(CT_UNKNOWN == ct)
+                        [zip_names addObject:@"Unknown certificate type"];
+                    
+                    [zip_sub_names addObject:(__bridge NSString *)SecCertificateCopySubjectSummary(cert)];
+                    
+                    [zip_items addObject:item];
+                }
             }
         }
         if(nil == items)
@@ -972,8 +1075,10 @@ static inline char itoh(int i) {
 
 - (size_t) numItems
 {
+    if(nil != zip_items)
+        return 1;
     //each item gets its own section
-    if(nil == items)
+    else if(nil == items)
         return 0;
     else
         return [items count];
@@ -1049,26 +1154,40 @@ static inline char itoh(int i) {
 - (NSString*) GetIdentityNameAtIndex:(long)index
 {
     NSLog(@"GetIdentityNameAtIndex: index %ld", index);
-    //look for email address first, failing that use the default keychain label
-    NSString* emailAddress = [self GetEmailAddressAtIndex:index];
-    if(!emailAddress)
+    
+    if(nil != zip_items)
     {
-        NSString* subject = [self GetCommonNameAtIndex:index];
-        if(!subject)
-            return [self getAttrValueAtSection:index attrType:kSecAttrLabel];
-        else
-            return subject;
+        return @"Zip file";
     }
-    else
-        return emailAddress;
+    else {
+        //look for email address first, failing that use the default keychain label
+        NSString* emailAddress = [self GetEmailAddressAtIndex:index];
+        if(!emailAddress)
+        {
+            NSString* subject = [self GetCommonNameAtIndex:index];
+            if(!subject)
+                return [self getAttrValueAtSection:index attrType:kSecAttrLabel];
+            else
+                return subject;
+        }
+        else
+            return emailAddress;
+    }
 }
 
 - (SecIdentityRef) GetIdentityAtIndex:(long)index
 {
     NSLog(@"GetIdentityAtIndex: index %ld", index);
-    if(index >= [items count])
+
+    NSArray* tmpitems = zip_items;
+    if(nil == tmpitems)
+    {
+        tmpitems = items;
+    }
+   
+    if(index >= [tmpitems count])
         return nil;
-    CFDictionaryRef item = (__bridge CFDictionaryRef)[items objectAtIndex:index];
+    CFDictionaryRef item = (__bridge CFDictionaryRef)[tmpitems objectAtIndex:index];
     
     SecIdentityRef identity = nil;
     CFTypeRef value;
@@ -1082,9 +1201,15 @@ static inline char itoh(int i) {
 
 - (NSData*) GetPrivateKeyAtIndex:(long)index
 {
-    if(index >= [items count])
+    NSArray* tmpitems = zip_items;
+    if(nil == tmpitems)
+    {
+        tmpitems = items;
+    }
+    
+    if(index >= [tmpitems count])
         return nil;
-    CFDictionaryRef item = (__bridge CFDictionaryRef)[items objectAtIndex:index];
+    CFDictionaryRef item = (__bridge CFDictionaryRef)[tmpitems objectAtIndex:index];
     
     NSData* privateKey = nil;
     CFTypeRef label;
@@ -1136,6 +1261,9 @@ static inline char itoh(int i) {
 
 - (NSString*) getAttrNameAtSection:(long)sectionIndex attrIndex:(long)attrIndex
 {
+    if(nil != zip_names)
+        return zip_names[attrIndex];
+    
     CFTypeRef attribute, value;
     NSString* attrFriendlyName = nil;
     
@@ -1190,6 +1318,9 @@ static inline char itoh(int i) {
  */
 - (NSString*) getAttrValueAtSection:(long)sectionIndex attrIndex:(long)attrIndex
 {
+    if(nil != zip_sub_names)
+        return zip_sub_names[attrIndex];
+    
     CFTypeRef attribute, value;
     
     @try 
@@ -1288,8 +1419,49 @@ static inline char itoh(int i) {
     }
 }
 
+- (NSData*) GetPKCS12Zip
+{
+    if(NULL == zip_items)
+    {
+        return NULL;
+    }
+
+    NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+    NSMutableString* s = [NSMutableString stringWithCapacity:20];
+    for (NSUInteger i = 0U; i < 20; i++) {
+        u_int32_t r = arc4random() % [alphabet length];
+        unichar c = [alphabet characterAtIndex:r];
+        [s appendFormat:@"%C", c];
+    }
+    
+    NSString *documentsDir= [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filePath= [documentsDir stringByAppendingPathComponent:@"test.zip"];
+    ZipFile *zipFile= [[ZipFile alloc] initWithFileName:filePath mode:ZipFileModeCreate];
+    
+    unsigned long count = [zip_items count];
+    for(long ii = 0; ii < count; ++ii)
+    {
+        NSString* filename = [NSString stringWithFormat:@"%lu.p12", ii];
+        NSData* d = [self GetPKCS12AtIndex:ii pw:s];
+        ZipWriteStream *stream1= [zipFile writeFileInZipWithName:filename fileDate:[NSDate dateWithTimeIntervalSinceNow:-86400.0] compressionLevel:ZipCompressionLevelBest];
+        [stream1 writeData:d];
+        [stream1 finishedWriting];
+    }
+    [zipFile close];
+    
+    //Put the PKCS 12 password on the pasteboard
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    [pasteboard setString:s];
+    
+    NSData *data = [[NSFileManager defaultManager] contentsAtPath:filePath];
+    return data;
+}
 
 - (NSData*) GetPKCS12AtIndex:(long)index
+{
+    return [self GetPKCS12AtIndex:index pw:NULL];
+}
+- (NSData*) GetPKCS12AtIndex:(long)index pw:(NSString*)pw
 {
     SecIdentityRef identity = [self GetIdentityAtIndex:index];
     if(!identity)
@@ -1350,15 +1522,19 @@ static inline char itoh(int i) {
     int p12BufLen = 0;
     std::string password;
     
-    NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
-    NSMutableString *s = [NSMutableString stringWithCapacity:20];
-    for (NSUInteger i = 0U; i < 20; i++) {
-        u_int32_t r = arc4random() % [alphabet length];
-        unichar c = [alphabet characterAtIndex:r];
-        [s appendFormat:@"%C", c];
+    if(NULL == pw)
+    {
+        NSString *alphabet  = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY0123456789";
+        NSMutableString* s = [NSMutableString stringWithCapacity:20];
+        for (NSUInteger i = 0U; i < 20; i++) {
+            u_int32_t r = arc4random() % [alphabet length];
+            unichar c = [alphabet characterAtIndex:r];
+            [s appendFormat:@"%C", c];
+        }
+        pw = s;
     }
     
-    int rv = PrepareAndExportPkcs12((unsigned char*)bits, (int)pkLen, (unsigned char*)[decodedData bytes], (int)[decodedData length], &p12Buf, &p12BufLen, [s UTF8String], password);
+    int rv = PrepareAndExportPkcs12((unsigned char*)bits, (int)pkLen, (unsigned char*)[decodedData bytes], (int)[decodedData length], &p12Buf, &p12BufLen, [pw UTF8String], password);
     if(0 == rv)
     {
         const char* pw = password.c_str();

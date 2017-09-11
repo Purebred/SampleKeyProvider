@@ -6,6 +6,24 @@
 
 #import "KeyDetailViewController.h"
 
+bool IsZipType(NSArray* utis)
+{
+    if([utis containsObject:@"purebred.zip.all"] ||
+       [utis containsObject:@"purebred.zip.all_user"] ||
+       [utis containsObject:@"purebred.zip.device"] ||
+       [utis containsObject:@"purebred.zip.signature"] ||
+       [utis containsObject:@"purebred.zip.encryption"] ||
+       [utis containsObject:@"purebred.zip.authentication"] ||
+       [utis containsObject:@"purebred.zip.no_filter"])
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
 @interface DocumentPickerViewController ()
 @end
 
@@ -151,24 +169,47 @@
 
 - (void) import:(long)row
 {
-    NSData* p12 = [keyChain GetPKCS12AtIndex:row];
-    if(!p12)
+    //check validTypes for zip file type
+    if(IsZipType(self.validTypes))
     {
-        //XXXDEFER Really need a UI here. UIAlertView and friends are not available. Apparently simulated Toast messages are possible and
-        //should be investigated for next release.
-        NSLog(@"Failed to retrieve PKCS #12 item from key chain");
-        return;
+        NSData* p12 = [keyChain GetPKCS12Zip];
+        if(!p12)
+        {
+            //XXXDEFER Really need a UI here. UIAlertView and friends are not available. Apparently simulated Toast messages are possible and
+            //should be investigated for next release.
+            NSLog(@"Failed to retrieve PKCS #12 item from key chain");
+            return;
+        }
+        NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
+        [fileCoordinator setPurposeIdentifier:[self providerIdentifier]];
+        NSURL *placeholderURL = [NSFileProviderExtension placeholderURLForURL:[self.documentStorageURL URLByAppendingPathComponent:@"tmp.zip"]];
+        
+        [p12 writeToFile:placeholderURL.path atomically:YES];
+        
+        NSLog(@"Allowing access to %@ for %lu bytes", placeholderURL.path, (unsigned long)p12.length);
+        
+        [self dismissGrantingAccessToURL:placeholderURL];
     }
-    
-    NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
-    [fileCoordinator setPurposeIdentifier:[self providerIdentifier]];
-    NSURL *placeholderURL = [NSFileProviderExtension placeholderURLForURL:[self.documentStorageURL URLByAppendingPathComponent:@"tmp.p12"]];
-    
-    [p12 writeToFile:placeholderURL.path atomically:YES];
-    
-    NSLog(@"Allowing access to %@ for %lu bytes", placeholderURL.path, (unsigned long)p12.length);
-    
-    [self dismissGrantingAccessToURL:placeholderURL];
+    else
+    {
+        NSData* p12 = [keyChain GetPKCS12AtIndex:row];
+        if(!p12)
+        {
+            //XXXDEFER Really need a UI here. UIAlertView and friends are not available. Apparently simulated Toast messages are possible and
+            //should be investigated for next release.
+            NSLog(@"Failed to retrieve PKCS #12 item from key chain");
+            return;
+        }
+        NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
+        [fileCoordinator setPurposeIdentifier:[self providerIdentifier]];
+        NSURL *placeholderURL = [NSFileProviderExtension placeholderURLForURL:[self.documentStorageURL URLByAppendingPathComponent:@"tmp.p12"]];
+        
+        [p12 writeToFile:placeholderURL.path atomically:YES];
+        
+        NSLog(@"Allowing access to %@ for %lu bytes", placeholderURL.path, (unsigned long)p12.length);
+        
+        [self dismissGrantingAccessToURL:placeholderURL];
+    }
 }
 
 @end
