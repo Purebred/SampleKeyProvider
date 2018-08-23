@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
-            timestampString = "524575221.076801"
+            timestampString = "536088082.487527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1457"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
-            timestampString = "524575221.076898"
+            timestampString = "536088082.487913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "261"
@@ -42,75 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
-            timestampString = "524575221.07697"
+            timestampString = "536088082.488188"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "308"
             endingLineNumber = "308"
             landmarkName = "PrepareAndExportPkcs12( //![in] unsigned char* keyBuf, int keyBufLen, //![in] unsigned char* certBuf, int certBufLen, //![out] unsigned char** p12Buf, int* p12BufLen, //![in] const char* inputPassword, //![out] std::string&amp; password)"
             landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrepareAndExportPkcs12(unsigned char*, int, unsigned char*, int, unsigned char**, int*, char const*, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
-                  moduleName = "SampleKeyProviderExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cwallace/devel/PKE/SampleKeyProvider/SampleKeyProviderExtension/KeyChainDataSource.mm"
-                  timestampString = "524577084.239251"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "308"
-                  endingLineNumber = "308"
-                  offsetFromSymbolStart = "512">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrepareAndExportPkcs12(unsigned char*, int, unsigned char*, int, unsigned char**, int*, char const*, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
-                  moduleName = "SampleKeyProviderExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cwallace/devel/PKE/SampleKeyProvider/SampleKeyProviderExtension/KeyChainDataSource.mm"
-                  timestampString = "524577084.24131"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "308"
-                  endingLineNumber = "308"
-                  offsetFromSymbolStart = "1324">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrepareAndExportPkcs12(unsigned char*, int, unsigned char*, int, unsigned char**, int*, char const*, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
-                  moduleName = "SampleKeyProviderExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cwallace/devel/PKE/SampleKeyProvider/SampleKeyProviderExtension/KeyChainDataSource.mm"
-                  timestampString = "524577084.243216"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "308"
-                  endingLineNumber = "308"
-                  offsetFromSymbolStart = "2656">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrepareAndExportPkcs12(unsigned char*, int, unsigned char*, int, unsigned char**, int*, char const*, std::__1::basic_string&lt;char, std::__1::char_traits&lt;char&gt;, std::__1::allocator&lt;char&gt; &gt;&amp;)"
-                  moduleName = "SampleKeyProviderExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cwallace/devel/PKE/SampleKeyProvider/SampleKeyProviderExtension/KeyChainDataSource.mm"
-                  timestampString = "524577084.245203"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "308"
-                  endingLineNumber = "308"
-                  offsetFromSymbolStart = "2884">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -120,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
-            timestampString = "524575221.077093"
+            timestampString = "536088082.488452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1538"
@@ -248,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575954.316079"
+            timestampString = "536088082.488843"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -264,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575955.271404"
+            timestampString = "536088082.488899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
@@ -280,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575956.497436"
+            timestampString = "536088082.488945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
@@ -296,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575957.611759"
+            timestampString = "536088082.48899"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -312,23 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575958.98376"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-numberOfSectionsInTableView:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575960.210408"
+            timestampString = "536088082.489034"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -344,7 +266,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575962.436557"
+            timestampString = "536088082.489078"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "84"
@@ -360,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575964.023927"
+            timestampString = "536088082.489123"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "98"
@@ -376,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575966.442409"
+            timestampString = "536088082.489164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
@@ -392,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575967.500824"
+            timestampString = "536088082.489206"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
@@ -408,7 +330,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575969.1089"
+            timestampString = "536088082.48925"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "162"
@@ -424,12 +346,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
-            timestampString = "524575970.785197"
+            timestampString = "536088082.489291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
             endingLineNumber = "173"
             landmarkName = "-import:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
+            timestampString = "536088082.489334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "IsZipType"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleKeyProviderExtension/DocumentPickerViewController.m"
+            timestampString = "536088082.489377"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "IsZipType"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
+            timestampString = "536088082.489421"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1160"
+            endingLineNumber = "1160"
+            landmarkName = "-GetIdentityNameAtIndex:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleKeyProviderExtension/KeyChainDataSource.mm"
+            timestampString = "536088082.489695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1078"
+            endingLineNumber = "1078"
+            landmarkName = "-numItems"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SampleKeyProvider/ViewController.m"
+            timestampString = "556719802.68582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-onImportSamplePkcs12:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

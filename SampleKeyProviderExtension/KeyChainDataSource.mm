@@ -258,7 +258,7 @@ int PrepareAndExportPkcs12(
             throw std::runtime_error("Error reading certificate.");
         
         //create a new PKCS12 object containing the certificate and private key
-        p12 = PKCS12_create(const_cast<char *>(password.c_str()), cert->name, privkey, cert, 0, 0, 0, 0, 0, 0);
+        p12 = PKCS12_create(const_cast<char *>(password.c_str()), cert->name, privkey, cert, 0, 0, -1, 0, 0, 0);
         if (!p12)
         {
             long errcode = ERR_get_error();
