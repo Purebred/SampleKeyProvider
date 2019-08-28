@@ -24,6 +24,8 @@
 	<string>1</string>
 	<key>NSExtension</key>
 	<dict>
+		<key>NSExtensionFileProviderSupportsEnumeration</key>
+		<true/>
 		<key>NSExtensionFileProviderDocumentGroup</key>
 		<string>group.red.hound.enterprise.SampleKeyProvider.security</string>
 		<key>NSExtensionPointIdentifier</key>
