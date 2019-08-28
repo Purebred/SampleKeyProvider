@@ -1,3 +1,5 @@
+The key sharing interface has changed to accommodate iOS13/iPadOS13. Details are [here](https://github.com/Purebred/KeyShareConsumer/blob/master/iOS13Notes.md).
+
 The SampleKeyProvider app is intended to provide an implementation of the document provider interface exposed by the Purebred Registration app to facilitate testing without needing to enroll with a Purebred server. PKCS 12 files can be imported into the SampleKeyProvider app using iTunes file sharing. Alternative, four P12 files similar to credentials from a test Red Hat CA instance are included in the app and can be imported into the key chain directly.  
 
 Document provider extensions were introduced in iOS 8 and are described [here](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/FileProvider.html). As additional background, a sample document provider was presented during the WWDC 2014 conference. Source code is available [here](https://github.com/master-nevi/WWDC-2014/tree/master/NewBox%20An%20Introduction%20to%20iCloud%20Document%20enhancements%20in%20iOS%208.0).
