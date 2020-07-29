@@ -57,24 +57,6 @@
 		55D56A101D0C76D3006C9620 /* libcrypto.pc in Resources */ = {isa = PBXBuildFile; fileRef = 55D56A0B1D0C76D3006C9620 /* libcrypto.pc */; };
 		55D56A111D0C76D3006C9620 /* libssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 55D56A0C1D0C76D3006C9620 /* libssl.pc */; };
 		55D56A121D0C76D3006C9620 /* openssl.pc in Resources */ = {isa = PBXBuildFile; fileRef = 55D56A0D1D0C76D3006C9620 /* openssl.pc */; };
-		55DB2F0D230AFB8500DEA50D /* FileProviderHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F0A230AFB8500DEA50D /* FileProviderHelpers.m */; };
-		55DB2F0E230AFB8500DEA50D /* KeyChainDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F0C230AFB8500DEA50D /* KeyChainDataSource.mm */; };
-		55DB2F11230AFBCF00DEA50D /* include in Resources */ = {isa = PBXBuildFile; fileRef = 55DB2F0F230AFBCE00DEA50D /* include */; };
-		55DB2F12230AFBCF00DEA50D /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 55DB2F10230AFBCF00DEA50D /* lib */; };
-		55DB2F16230AFC4C00DEA50D /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DB2F14230AFC4C00DEA50D /* libcrypto.a */; };
-		55DB2F17230AFC4C00DEA50D /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55DB2F15230AFC4C00DEA50D /* libssl.a */; };
-		55DB2F1A230AFD5300DEA50D /* Objective-Zip in Resources */ = {isa = PBXBuildFile; fileRef = 55DB2F18230AFD5300DEA50D /* Objective-Zip */; };
-		55DB2F1B230AFD5300DEA50D /* MiniZip in Resources */ = {isa = PBXBuildFile; fileRef = 55DB2F19230AFD5300DEA50D /* MiniZip */; };
-		55DB2F1C230AFD9700DEA50D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 556DC8601DEC651700CBF3D8 /* libz.tbd */; };
-		55DB2F22230AFE8B00DEA50D /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F1F230AFE8A00DEA50D /* mztools.c */; };
-		55DB2F23230AFE8B00DEA50D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F20230AFE8B00DEA50D /* ioapi.c */; };
-		55DB2F24230AFE8B00DEA50D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F21230AFE8B00DEA50D /* unzip.c */; };
-		55DB2F26230AFE9F00DEA50D /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F25230AFE9E00DEA50D /* zip.c */; };
-		55DB2F2C230AFEB200DEA50D /* ZipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F27230AFEB100DEA50D /* ZipFile.m */; };
-		55DB2F2D230AFEB200DEA50D /* ZipException.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F28230AFEB100DEA50D /* ZipException.m */; };
-		55DB2F2E230AFEB200DEA50D /* FileInZipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F29230AFEB100DEA50D /* FileInZipInfo.m */; };
-		55DB2F2F230AFEB200DEA50D /* ZipWriteStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F2A230AFEB100DEA50D /* ZipWriteStream.m */; };
-		55DB2F30230AFEB200DEA50D /* ZipReadStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB2F2B230AFEB100DEA50D /* ZipReadStream.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,25 +229,6 @@
 		55D56A0B1D0C76D3006C9620 /* libcrypto.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libcrypto.pc; sourceTree = "<group>"; };
 		55D56A0C1D0C76D3006C9620 /* libssl.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libssl.pc; sourceTree = "<group>"; };
 		55D56A0D1D0C76D3006C9620 /* openssl.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = openssl.pc; sourceTree = "<group>"; };
-		55DB2F09230AFB8500DEA50D /* KeyChainDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainDataSource.h; sourceTree = "<group>"; };
-		55DB2F0A230AFB8500DEA50D /* FileProviderHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileProviderHelpers.m; sourceTree = "<group>"; };
-		55DB2F0B230AFB8500DEA50D /* FileProviderHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileProviderHelpers.h; sourceTree = "<group>"; };
-		55DB2F0C230AFB8500DEA50D /* KeyChainDataSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KeyChainDataSource.mm; sourceTree = "<group>"; };
-		55DB2F0F230AFBCE00DEA50D /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
-		55DB2F10230AFBCF00DEA50D /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
-		55DB2F14230AFC4C00DEA50D /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = SampleKeyProviderExtensionFileProvider/lib/libcrypto.a; sourceTree = "<group>"; };
-		55DB2F15230AFC4C00DEA50D /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = SampleKeyProviderExtensionFileProvider/lib/libssl.a; sourceTree = "<group>"; };
-		55DB2F18230AFD5300DEA50D /* Objective-Zip */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Objective-Zip"; sourceTree = "<group>"; };
-		55DB2F19230AFD5300DEA50D /* MiniZip */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MiniZip; sourceTree = "<group>"; };
-		55DB2F1F230AFE8A00DEA50D /* mztools.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = mztools.c; path = SampleKeyProviderExtensionFileProvider/MiniZip/mztools.c; sourceTree = "<group>"; };
-		55DB2F20230AFE8B00DEA50D /* ioapi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SampleKeyProviderExtensionFileProvider/MiniZip/ioapi.c; sourceTree = "<group>"; };
-		55DB2F21230AFE8B00DEA50D /* unzip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SampleKeyProviderExtensionFileProvider/MiniZip/unzip.c; sourceTree = "<group>"; };
-		55DB2F25230AFE9E00DEA50D /* zip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SampleKeyProviderExtensionFileProvider/MiniZip/zip.c; sourceTree = "<group>"; };
-		55DB2F27230AFEB100DEA50D /* ZipFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZipFile.m; path = "SampleKeyProviderExtensionFileProvider/Objective-Zip/ZipFile.m"; sourceTree = "<group>"; };
-		55DB2F28230AFEB100DEA50D /* ZipException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZipException.m; path = "SampleKeyProviderExtensionFileProvider/Objective-Zip/ZipException.m"; sourceTree = "<group>"; };
-		55DB2F29230AFEB100DEA50D /* FileInZipInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FileInZipInfo.m; path = "SampleKeyProviderExtensionFileProvider/Objective-Zip/FileInZipInfo.m"; sourceTree = "<group>"; };
-		55DB2F2A230AFEB100DEA50D /* ZipWriteStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZipWriteStream.m; path = "SampleKeyProviderExtensionFileProvider/Objective-Zip/ZipWriteStream.m"; sourceTree = "<group>"; };
-		55DB2F2B230AFEB100DEA50D /* ZipReadStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZipReadStream.m; path = "SampleKeyProviderExtensionFileProvider/Objective-Zip/ZipReadStream.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,9 +256,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DB2F1C230AFD9700DEA50D /* libz.tbd in Frameworks */,
-				55DB2F16230AFC4C00DEA50D /* libcrypto.a in Frameworks */,
-				55DB2F17230AFC4C00DEA50D /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,15 +265,6 @@
 		5522F57D1D0B7B970063D107 = {
 			isa = PBXGroup;
 			children = (
-				55DB2F29230AFEB100DEA50D /* FileInZipInfo.m */,
-				55DB2F28230AFEB100DEA50D /* ZipException.m */,
-				55DB2F27230AFEB100DEA50D /* ZipFile.m */,
-				55DB2F2B230AFEB100DEA50D /* ZipReadStream.m */,
-				55DB2F2A230AFEB100DEA50D /* ZipWriteStream.m */,
-				55DB2F25230AFE9E00DEA50D /* zip.c */,
-				55DB2F20230AFE8B00DEA50D /* ioapi.c */,
-				55DB2F1F230AFE8A00DEA50D /* mztools.c */,
-				55DB2F21230AFE8B00DEA50D /* unzip.c */,
 				556DC8601DEC651700CBF3D8 /* libz.tbd */,
 				550BD1C9212EDCBD0012D8C7 /* 9a69ba0e332da182a8d718750168135a55acdded.p12 */,
 				550BD1C6212EDCBC0012D8C7 /* 37f1cca56ad3d10fd35337f2803c7793d22d1099.p12 */,
@@ -327,7 +278,6 @@
 				5522F5A51D0B7BB50063D107 /* SampleKeyProviderExtension */,
 				5522F5B41D0B7BB50063D107 /* SampleKeyProviderExtensionFileProvider */,
 				5522F5871D0B7B970063D107 /* Products */,
-				55DB2F13230AFC4C00DEA50D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,17 +351,9 @@
 		5522F5B41D0B7BB50063D107 /* SampleKeyProviderExtensionFileProvider */ = {
 			isa = PBXGroup;
 			children = (
-				55DB2F19230AFD5300DEA50D /* MiniZip */,
-				55DB2F18230AFD5300DEA50D /* Objective-Zip */,
-				55DB2F0F230AFBCE00DEA50D /* include */,
-				55DB2F10230AFBCF00DEA50D /* lib */,
 				5522F5B71D0B7BB50063D107 /* FileProvider.h */,
 				5522F5B81D0B7BB50063D107 /* FileProvider.m */,
-				55DB2F0B230AFB8500DEA50D /* FileProviderHelpers.h */,
-				55DB2F0A230AFB8500DEA50D /* FileProviderHelpers.m */,
 				5522F5BA1D0B7BB50063D107 /* Info.plist */,
-				55DB2F09230AFB8500DEA50D /* KeyChainDataSource.h */,
-				55DB2F0C230AFB8500DEA50D /* KeyChainDataSource.mm */,
 				5522F5B51D0B7BB50063D107 /* Supporting Files */,
 			);
 			path = SampleKeyProviderExtensionFileProvider;
@@ -577,15 +519,6 @@
 			path = pkgconfig;
 			sourceTree = "<group>";
 		};
-		55DB2F13230AFC4C00DEA50D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				55DB2F14230AFC4C00DEA50D /* libcrypto.a */,
-				55DB2F15230AFC4C00DEA50D /* libssl.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,7 +628,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -745,10 +677,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DB2F12230AFBCF00DEA50D /* lib in Resources */,
-				55DB2F1A230AFD5300DEA50D /* Objective-Zip in Resources */,
-				55DB2F11230AFBCF00DEA50D /* include in Resources */,
-				55DB2F1B230AFD5300DEA50D /* MiniZip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,17 +727,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55DB2F2C230AFEB200DEA50D /* ZipFile.m in Sources */,
-				55DB2F2D230AFEB200DEA50D /* ZipException.m in Sources */,
-				55DB2F2E230AFEB200DEA50D /* FileInZipInfo.m in Sources */,
-				55DB2F2F230AFEB200DEA50D /* ZipWriteStream.m in Sources */,
-				55DB2F30230AFEB200DEA50D /* ZipReadStream.m in Sources */,
-				55DB2F26230AFE9F00DEA50D /* zip.c in Sources */,
-				55DB2F22230AFE8B00DEA50D /* mztools.c in Sources */,
-				55DB2F23230AFE8B00DEA50D /* ioapi.c in Sources */,
-				55DB2F24230AFE8B00DEA50D /* unzip.c in Sources */,
-				55DB2F0E230AFB8500DEA50D /* KeyChainDataSource.mm in Sources */,
-				55DB2F0D230AFB8500DEA50D /* FileProviderHelpers.m in Sources */,
 				5522F5B91D0B7BB50063D107 /* FileProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,7 +868,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider;
@@ -970,7 +887,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider;
@@ -986,15 +903,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2FBELHR72N;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/include";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SampleKeyProviderExtensionFileProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/include",
-					"$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/lib",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1010,15 +922,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2FBELHR72N;
-				ENABLE_BITCODE = NO;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/include";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SampleKeyProviderExtensionFileProvider/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/include",
-					"$(PROJECT_DIR)/SampleKeyProviderExtensionFileProvider/lib",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1036,7 +943,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProviderExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtension;
@@ -1055,7 +962,7 @@
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProviderExtension/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
 				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtension;
