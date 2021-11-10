@@ -10,18 +10,20 @@ The list of keys displayed by a provider can be filtered using a uniform type id
 
 * com.rsa.pkcs-12
 * purebred.select.all
-* purebred.select.all_user
+* purebred.select.all-user
 * purebred.select.device
 * purebred.select.signature
 * purebred.select.encryption
 * purebred.select.authentication
 * purebred.zip.all
-* purebred.zip.all_user
+* purebred.zip.all-user
 * purebred.zip.device
 * purebred.zip.signature
 * purebred.zip.encryption
 * purebred.zip.authentication
-* purebred.zip.no_filter
+* purebred.zip.no-filter
+
+NOTE* For custom app UTIs with "_" have been replaced with "-". 
 
 By default, the Purebred Registration app serves up the most recent keys for the indicated types. The no_filter option can be used to cause all available keys for the indicated types to be displayed. 
 

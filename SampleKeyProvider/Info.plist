@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIFileSharingEnabled</key>
@@ -58,5 +58,178 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UTExportedTypeDeclarations</key>
+        <array>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.all</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Archive Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.all.user</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Archive Document</string>
+        </dict>
+	    <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.all-user</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Archive Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.no-filter</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Archive Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.signature</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.no-filter</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.encryption</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.authentication</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.select.device</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.all</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.all.user</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.all-user</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.all_user</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.signature</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.encryption</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.authentication</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>
+        <dict>
+            <key>UTTypeIdentifier</key>
+            <string>purebred.zip.device</string>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.data</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>Poprietary Certificate Document</string>
+        </dict>       
+    </array>
 </dict>
 </plist>

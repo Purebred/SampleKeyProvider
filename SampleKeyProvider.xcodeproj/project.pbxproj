@@ -587,7 +587,7 @@
 				TargetAttributes = {
 					5522F5851D0B7B970063D107 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2FBELHR72N;
+						DevelopmentTeam = M355KP63QV;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 1;
@@ -599,7 +599,7 @@
 					};
 					5522F5A31D0B7BB50063D107 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2FBELHR72N;
+						DevelopmentTeam = M355KP63QV;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -611,7 +611,7 @@
 					};
 					5522F5B21D0B7BB50063D107 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2FBELHR72N;
+						DevelopmentTeam = M355KP63QV;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -628,6 +628,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -864,14 +865,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProvider/SampleKeyProvider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7";
 			};
@@ -883,14 +884,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProvider/SampleKeyProvider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7";
 			};
@@ -902,12 +903,12 @@
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProviderExtensionFileProvider/SampleKeyProviderExtensionFileProvider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SampleKeyProviderExtensionFileProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -921,12 +922,12 @@
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProviderExtensionFileProvider/SampleKeyProviderExtensionFileProvider.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SampleKeyProviderExtensionFileProvider/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider.SampleKeyProviderExtensionFileProvider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -939,14 +940,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProviderExtension/SampleKeyProviderExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProviderExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider.SampleKeyProviderExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7";
@@ -958,14 +959,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = SampleKeyProviderExtension/SampleKeyProviderExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2FBELHR72N;
+				DEVELOPMENT_TEAM = M355KP63QV;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/include";
 				INFOPLIST_FILE = SampleKeyProviderExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/SampleKeyProviderExtension/lib";
-				PRODUCT_BUNDLE_IDENTIFIER = red.hound.enterprise.SampleKeyProvider.SampleKeyProviderExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = red.hound.customapp.SampleKeyProvider.SampleKeyProviderExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "arm64 armv7";

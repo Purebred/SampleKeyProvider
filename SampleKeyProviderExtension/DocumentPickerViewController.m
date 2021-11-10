@@ -10,11 +10,13 @@ bool IsZipType(NSArray* utis)
 {
     if([utis containsObject:@"purebred.zip.all"] ||
        [utis containsObject:@"purebred.zip.all_user"] ||
+       [utis containsObject:@"purebred.zip.all-user"] ||
        [utis containsObject:@"purebred.zip.device"] ||
        [utis containsObject:@"purebred.zip.signature"] ||
        [utis containsObject:@"purebred.zip.encryption"] ||
        [utis containsObject:@"purebred.zip.authentication"] ||
-       [utis containsObject:@"purebred.zip.no_filter"])
+       [utis containsObject:@"purebred.zip.no_filter"] ||
+       [utis containsObject:@"purebred.zip.no-filter"])
     {
         return true;
     }
@@ -84,10 +86,22 @@ bool IsZipType(NSArray* utis)
     NSString *text = [keyChain GetIdentityNameAtIndex:indexPath.row];
     
     CGRect frameRect = [self.tableView frame];
-    CGSize constraint = CGSizeMake(frameRect.size.width - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+    //CGSize constraint = CGSizeMake(frameRect.size.width - (CELL_CONTENT_MARGIN * 2), 20000.0f);
     
-    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
-    
+    //CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
+ 
+    NSAttributedString *attributedText =
+        [[NSAttributedString alloc]
+            initWithString:text
+            attributes:@
+            {
+                NSFontAttributeName: [UIFont systemFontOfSize:FONT_SIZE]
+            }];
+    CGRect rect = [attributedText boundingRectWithSize:(CGSize){frameRect.size.width, CGFLOAT_MAX}
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];
+    CGSize size = rect.size;
+
     CGFloat height = MAX(size.height, 44.0f);
     
     return height + (CELL_CONTENT_MARGIN * 2);
@@ -105,7 +119,7 @@ bool IsZipType(NSArray* utis)
         
         label = [[UILabel alloc] initWithFrame:CGRectZero] ;
         [label setLineBreakMode:NSLineBreakByCharWrapping];
-        [label setMinimumFontSize:FONT_SIZE];
+        //[label setMinimumFontSize:FONT_SIZE];
         [label setNumberOfLines:0];
         [label setFont:[UIFont systemFontOfSize:FONT_SIZE]];
         [label setTag:1];
@@ -116,10 +130,22 @@ bool IsZipType(NSArray* utis)
     NSString *text = [keyChain GetIdentityNameAtIndex:indexPath.row];
     
     CGRect frameRect = [self.tableView frame];
-    CGSize constraint = CGSizeMake(frameRect.size.width - (CELL_CONTENT_MARGIN * 2), 20000.0f);
+    //CGSize constraint = CGSizeMake(frameRect.size.width - (CELL_CONTENT_MARGIN * 2), 20000.0f);
     
-    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
+    //CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:FONT_SIZE] constrainedToSize:constraint lineBreakMode:NSLineBreakByCharWrapping];
     
+    NSAttributedString *attributedText =
+        [[NSAttributedString alloc]
+            initWithString:text
+            attributes:@
+            {
+                NSFontAttributeName: [UIFont systemFontOfSize:FONT_SIZE]
+            }];
+    CGRect rect = [attributedText boundingRectWithSize:(CGSize){frameRect.size.width, CGFLOAT_MAX}
+                                               options:NSStringDrawingUsesLineFragmentOrigin
+                                               context:nil];
+    CGSize size = rect.size;
+
     if (!label)
         label = (UILabel*)[cell viewWithTag:1];
     

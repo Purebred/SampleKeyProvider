@@ -111,6 +111,7 @@ bool IsZipType(NSArray* utis)
 {
     if([utis containsObject:@"purebred.zip.all"] ||
        [utis containsObject:@"purebred.zip.all_user"] ||
+       [utis containsObject:@"purebred.zip.all-user"] ||
        [utis containsObject:@"purebred.zip.device"] ||
        [utis containsObject:@"purebred.zip.signature"] ||
        [utis containsObject:@"purebred.zip.encryption"] ||
@@ -135,6 +136,8 @@ bool ZippedCertTypeRequested(SecCertificateRef cert, NSArray* utis)
         return false;
     else if(CT_DEVICE != ct && [utis containsObject:@"purebred.zip.all_user"])
         return true;
+    else if(CT_DEVICE != ct && [utis containsObject:@"purebred.zip.all-user"])
+        return true;
     else if(CT_DEVICE == ct && [utis containsObject:@"purebred.zip.device"])
         return true;
     else if(CT_SIGNATURE == ct && [utis containsObject:@"purebred.zip.signature"])
@@ -158,6 +161,8 @@ bool CertTypeRequested(SecCertificateRef cert, NSArray* utis)
     if(CT_UNKNOWN == ct)
         return false;
     else if(CT_DEVICE != ct && [utis containsObject:@"purebred.select.all_user"])
+        return true;
+    else if(CT_DEVICE != ct && [utis containsObject:@"purebred.select.all-user"])
         return true;
     else if(CT_DEVICE == ct && [utis containsObject:@"purebred.select.device"])
         return true;

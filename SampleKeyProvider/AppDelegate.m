@@ -28,8 +28,8 @@
         return YES;
     
     // Get the
-    UIDocumentInteractionController* docInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
-    NSString* uti = docInteractionController.UTI;
+    //UIDocumentInteractionController* docInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
+    //NSString* uti = docInteractionController.UTI;
     NSString* pathExtension = [url pathExtension];
     
     if(NSOrderedSame == [pathExtension compare:@"p12"] ||

@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -34,19 +34,19 @@
 			<array>
 				<string>com.rsa.pkcs-12</string>
 				<string>purebred.select.all</string>
-				<string>purebred.select.all_user</string>
+				<string>purebred.select.all-user</string>
 				<string>purebred.select.device</string>
 				<string>purebred.select.signature</string>
 				<string>purebred.select.encryption</string>
 				<string>purebred.select.authentication</string>
 				<string>purebred.zip.all</string>
-				<string>purebred.zip.all_user</string>
+				<string>purebred.zip.all-user</string>
 				<string>purebred.zip.device</string>
 				<string>purebred.zip.signature</string>
 				<string>purebred.zip.encryption</string>
 				<string>purebred.zip.authentication</string>
-				<string>purebred.zip.no_filter</string>
-				<string>purebred.select.no_filter</string>
+				<string>purebred.zip.no-filter</string>
+				<string>purebred.select.no-filter</string>
 			</array>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>

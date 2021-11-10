@@ -6,7 +6,7 @@
 	<string>NSFileProtectionComplete</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)red.hound.enterprise.SampleKeyProvider</string>
+		<string>$(AppIdentifierPrefix)red.hound.customapp.SampleKeyProvider</string>
 	</array>
 </dict>
 </plist>
