@@ -29,7 +29,12 @@ By default, the Purebred Registration app serves up the most recent keys for the
 
 Details on obtaining and testing the Purebred Registration app will be posted soon. See [here](https://cyber.mil/pki-pke/purebred).
 
+Bundle identifiers need to be updated to reflect bundle identifiers associated with the signer. These include:
 
+Bundle Identifier for SampleKeyProvider, SampleKeyProviderExtension, SampleKeyProviderExtensionFileProvider
+keychain-access-groups for SampleKeyProvider, SampleKeyProviderExtension, SampleKeyProviderExtensionFileProvider
+com.apple.security.application-groups for SampleKeyProvider, SampleKeyProviderExtension, SampleKeyProviderExtensionFileProvider
+NSExtensionFileProviderDocumentGroup for SampleKeyProviderExtensionFileProvider
 
 
 
